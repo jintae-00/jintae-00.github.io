@@ -12,61 +12,42 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231E7A4C'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial' font-weight='700' font-size='17' fill='white' text-anchor='middle'%3EJP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Sora:wght@500;600;700&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<a class="skip" href="#publications">Skip to publications</a>
-
-<header class="site-head">
-  <div class="wrap head-row">
-    <a class="brand" href="#top">Jintae Park</a>
-    <nav class="top-nav" aria-label="Sections">
-      <a href="#news">News</a>
-      <a href="#publications">Publications</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#awards">Awards</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
+<main class="wrap" id="top">
 
 <!-- ============================== HERO ============================== -->
-<section class="hero wrap">
-  <div class="hero-text">
-    <p class="eyebrow">Ph.D. student · KAIST AI · Advised by Jaegul Choo</p>
+<header class="hero">
+  <div class="hero-info">
     <h1 class="name">Jintae Park <span class="name-ko">박진태</span></h1>
-    <p class="thesis">I build agents that <em>see</em>, reason about <em>space</em>, and <em>act</em>.</p>
-    <p class="bio">
-      I am a Ph.D. student at the Kim Jaechul Graduate School of AI, KAIST, advised by
-      Prof. Jaegul Choo. My research asks how a model's understanding of a scene can survive the
-      trip to action: recovering editable structure from flat images, grounding language into
-      real-time robot navigation, and keeping long-horizon robot policies from failing.
-      Before KAIST I studied Business and Computer Science at Korea University, worked on spatial
-      reasoning for navigation models at KIST 인공지능연구단, and I currently collaborate with
-      Samsung Electronics on automated wafer defect analysis.
-    </p>
-    <ul class="interests" aria-label="Research interests">
-      <li>Visuo-spatial reasoning</li>
-      <li>Long-horizon robot action policies</li>
-      <li>Agentic AI</li>
-    </ul>
+    <p class="affil">Integrated M.S./Ph.D. at KAIST AI, DAVIAN Lab, advised by Prof. Jaegul Choo.</p>
     <div class="hero-links">
-      <a class="pill" href="mailto:sonjt00@kaist.ac.kr"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V18h16V7.4l-8 5.3-8-5.3zM4.9 7l7.1 4.7L19.1 7H4.9z"/></svg>sonjt00@kaist.ac.kr</a>
-      <a class="pill" href="https://github.com/jintae-00" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>GitHub</a>
-      <a class="pill" href="https://huggingface.co/Jintae-Park" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9 9 0 0 0-8.6 11.6 2.6 2.6 0 0 0-1 4.3c.4.4.9.6 1.4.7a2.6 2.6 0 0 0 2.7 3.1c.6 0 1.1-.2 1.5-.5A9 9 0 0 0 12 22a9 9 0 0 0 4-1c.4.4 1 .6 1.6.6a2.6 2.6 0 0 0 2.6-3.1c.5-.1 1-.3 1.4-.7a2.6 2.6 0 0 0-1-4.3A9 9 0 0 0 12 2zm-3.3 6.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zm6.6 0a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM8 12.8c.3 0 .5.1.6.3.8 1 2 1.6 3.4 1.6s2.6-.6 3.4-1.6a.8.8 0 0 1 1.3.9 6 6 0 0 1-9.4 0c-.3-.4-.2-1 .2-1.2h.5z"/></svg>Hugging Face</a>
+      <a href="mailto:sonjt00@kaist.ac.kr"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V18h16V7.4l-8 5.3-8-5.3zM4.9 7l7.1 4.7L19.1 7H4.9z"/></svg>Email</a>
+      <a href="https://github.com/jintae-00" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>GitHub</a>
+      <a href="https://huggingface.co/Jintae-Park" target="_blank" rel="noopener"><span class="hf" aria-hidden="true">🤗</span>Hugging Face</a>
     </div>
+    <p class="bio">
+      I'm a Ph.D. student at Kim Jaechul Graduate School of AI, KAIST, advised by Professor <a href="https://sites.google.com/site/jaegulchoo/" target="_blank" rel="noopener">Jaegul Choo</a>.
+      My research interest lies in <strong>spatial reasoning for action policies</strong>, so that robots and agents can read a scene and act on it.
+    </p>
+    <ul class="keywords" aria-label="Research keywords">
+      <li>Spatial Reasoning for Action Policies</li>
+      <li>Robotics</li>
+      <li>Agentic AI</li>
+      <li>Long-horizon Action Policies</li>
+      <li>Vision-Language Models</li>
+    </ul>
   </div>
 
   <!-- Flip-book portrait: hover turns the page, click keeps turning -->
   <div class="hero-book">
     <div class="book" id="book" tabindex="0" role="button" aria-label="Photo book. Hover to peek, click to turn the page." data-page="0">
       <div class="leaf leaf-left">
-        <p class="leaf-kicker">Turn the page →</p>
-        <p class="leaf-note">Three pages: a portrait, and the quadruped robot I run experiments with on the KAIST campus at night.</p>
+        <p class="leaf-kicker">Next page →</p>
+        <p class="leaf-note">A portrait, then the quadruped I run experiments with.</p>
         <p class="leaf-count"><span id="page-now">1</span> / 3</p>
       </div>
       <div class="stack">
@@ -75,11 +56,11 @@
           <div class="face back"><span class="back-label">p.1</span><p>Portrait, 2026.</p></div>
         </div>
         <div class="page" data-i="1">
-          <div class="face front"><img src="assets/img/robot_grass.jpg" alt="Quadruped robot walking along a grass-lined path at night" width="600" height="800" loading="lazy"></div>
-          <div class="face back"><span class="back-label">p.2</span><p>Vision60 on a campus path at night, threading traffic cones under the instruction "never enter the grass".</p></div>
+          <div class="face front"><img src="assets/img/robot_grass.jpg" alt="Quadruped robot on a campus path at night" width="600" height="800" loading="lazy"></div>
+          <div class="face back"><span class="back-label">p.2</span><p>Vision60 on a campus path at night.</p></div>
         </div>
         <div class="page" data-i="2">
-          <div class="face front"><img src="assets/img/robot_stone.jpg" alt="Quadruped robot passing between chairs on a stone plaza at night" width="600" height="800" loading="lazy"></div>
+          <div class="face front"><img src="assets/img/robot_stone.jpg" alt="Quadruped robot on a stone plaza at night" width="600" height="800" loading="lazy"></div>
           <div class="face back"><span class="back-label">p.3</span><p>Stone plaza run.</p></div>
         </div>
         <span class="edge edge-1" aria-hidden="true"></span>
@@ -89,260 +70,211 @@
     </div>
     <p class="book-hint" aria-hidden="true">hover to peek · click to turn</p>
   </div>
-</section>
+</header>
 
 <!-- ============================== NEWS ============================== -->
-<section class="wrap section" id="news">
+<section class="section" id="news">
   <h2 class="h2">News</h2>
   <ul class="news">
-    <li><time>Sep 2026</time><span>A new paper on real-time, language-grounded quadruped navigation is under review.</span></li>
-    <li><time>Jul 2026</time><span><a href="#pub-redesign">ReDesign</a> is accepted to <strong>ECCV 2026</strong>. Code, the Figma-909 dataset, and the project page are released.</span></li>
-    <li><time>Mar 2026</time><span>Started the Ph.D. program at KAIST AI. Began an industry–academia research collaboration with Samsung Electronics on wafer defect detection.</span></li>
-    <li><time>Jun 2025</time><span>Joined Prof. Jaegul Choo's group at KAIST AI as an undergraduate research intern.</span></li>
-    <li><time>Feb 2025</time><span><a href="#pub-odpg">ODPG</a> is presented as an <strong>oral</strong> at VISAPP 2025.</span></li>
-    <li><time>Dec 2024</time><span>Started as a student researcher at KIST 인공지능연구단 (AI Research Center).</span></li>
+    <li><time>Sep 2026</time><span>New paper on real-time, language-grounded quadruped navigation is under review.</span></li>
+    <li><time>Jul 2026</time><span><a href="#pub-redesign">ReDesign</a> accepted to <strong>ECCV 2026</strong>.</span></li>
+    <li><time>Mar 2026</time><span>Started at KAIST AI. Began a research collaboration with Samsung Electronics.</span></li>
+    <li><time>Feb 2025</time><span><a href="#pub-odpg">ODPG</a> presented as an <strong>oral</strong> at VISAPP 2025.</span></li>
+    <li><time>Dec 2024</time><span>Joined KIST 인공지능연구단 as a student researcher.</span></li>
   </ul>
 </section>
 
 <!-- ============================== PUBLICATIONS ============================== -->
-<section class="wrap section" id="publications">
-  <div class="h2-row">
-    <h2 class="h2">Publications</h2>
-    <p class="h2-note"><sup>*</sup> denotes co-first authorship. I am a co-first author on all three papers.</p>
-  </div>
+<section class="section" id="publications">
+  <h2 class="h2">Publications <span class="h2-note">* equal contribution</span></h2>
 
   <!-- ---------- Under review: robot navigation ---------- -->
   <article class="pub" id="pub-nav">
-    <div class="pub-head">
-      <div class="pub-meta">
-        <span class="venue venue-review">Under review · 2026</span>
-        <span class="tag">Robot navigation</span>
-        <span class="tag">Vision-language grounding</span>
-      </div>
-      <h3 class="pub-title">From Instruction to Motion: Real-Time Language-Grounded Navigation on a Quadruped Robot</h3>
-      <p class="authors"><strong>Jintae Park<sup>*</sup></strong> and co-authors<span class="anon"> (author list withheld during double-blind review)</span></p>
-      <p class="abstract">
-        A user's constraint and a vision-language model's read of a scene rarely make it all the way
-        to the robot's wheels or legs. Here the VLM, prompted with the user's instruction, breaks the
-        scene into a few judgments that matter for motion: which surfaces may be walked on, how much
-        room each object deserves, which way the goal lies, and where a gap is wide enough to pass.
-        Expert detection and segmentation models pin every judgment to pixels, the results are fused
-        into one compact map, and that map both conditions lightweight trajectory decoders and scores
-        each candidate they propose. Because the map is refreshed from the live frame while the slower
-        VLM reasoning catches up, the robot stays aligned with a moving scene. The system runs in real
-        time on a quadruped, outperforms navigation foundation models and VLA baselines in simulation
-        and on campus, and a single new sentence from the user reroutes it without retraining.
-      </p>
-      <div class="links">
-        <span class="btn btn-muted" aria-disabled="true"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>Paper coming soon</span>
-        <a class="btn" href="#nav-pipeline">Pipeline</a>
-        <a class="btn" href="#nav-videos">Real-robot videos</a>
+    <div class="pub-media">
+      <div class="carousel" data-carousel aria-label="Media for the navigation paper">
+        <div class="track">
+          <figure class="slide slide-vid" data-full="assets/video/nav_grass_4x.mp4" data-kind="video" data-caption="Grass road at night, 4× speed. Instruction: “go behind the traffic cones avoiding the obstacles, never enter the grass.” Panels: third-person view · grounded semantic layers and cost map · fused map with candidate trajectories · bird's-eye scoring.">
+            <video muted loop playsinline preload="none" poster="assets/video/thumb_nav_grass_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_grass.mp4" type="video/mp4"></video>
+            <span class="badge">4×</span>
+          </figure>
+          <figure class="slide slide-vid" data-full="assets/video/nav_stone_4x.mp4" data-kind="video" data-caption="Stone plaza at night, 4× speed. Instruction: “avoid the chairs and go between the available cornerstones.”">
+            <video muted loop playsinline preload="none" poster="assets/video/thumb_nav_stone_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_stone.mp4" type="video/mp4"></video>
+            <span class="badge">4×</span>
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/nav_pipeline.webp" data-kind="image" data-caption="Pipeline. Instruction-conditioned VLM judgments are grounded by detection and segmentation tools and composed into one map that conditions the trajectory decoders and scores their candidates.">
+            <img src="assets/figures/nav_pipeline.webp" alt="Pipeline figure" loading="lazy" width="2400" height="1215">
+          </figure>
+        </div>
+        <button class="cnav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="cnav next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="dots" aria-hidden="true"></div>
       </div>
     </div>
-
-    <div class="pub-media" id="nav-videos">
-      <figure class="vid vid-wide">
-        <video muted loop playsinline preload="metadata" poster="assets/video/nav_grass_poster.jpg" data-autoplay>
-          <source src="assets/video/nav_grass_4x.mp4" type="video/mp4">
-        </video>
-        <figcaption><span class="chip">4× speed</span> Grass road, night. Instruction: <q>go behind the traffic cones avoiding the obstacles, never enter the grass.</q> Left to right: third-person view, grounded semantic layers and cost map, fused map with candidate trajectories, bird's-eye scoring.</figcaption>
-      </figure>
-      <figure class="vid vid-wide">
-        <video muted loop playsinline preload="metadata" poster="assets/video/nav_stone_poster.jpg" data-autoplay>
-          <source src="assets/video/nav_stone_4x.mp4" type="video/mp4">
-        </video>
-        <figcaption><span class="chip">4× speed</span> Stone plaza, night. Instruction: <q>avoid the chairs and go between the available cornerstones.</q></figcaption>
-      </figure>
-      <figure class="fig" id="nav-pipeline">
-        <a href="assets/figures/nav_pipeline.webp" target="_blank" rel="noopener"><img src="assets/figures/nav_pipeline.webp" alt="Pipeline: a VLM decomposes the scene under the user's instruction, expert vision tools ground each judgment, the composed map conditions three trajectory decoders and scores their candidates in bird's-eye view." loading="lazy" width="2400" height="1215"></a>
-        <figcaption>Pipeline. Instruction-conditioned VLM judgments are grounded by detection and segmentation tools, composed into a single map that conditions the decoders and scores their trajectories.</figcaption>
-      </figure>
+    <div class="pub-body">
+      <h3 class="pub-title">From Instruction to Motion: Real-Time Language-Grounded Navigation on a Quadruped Robot</h3>
+      <p class="pub-authors"><u>Jintae Park</u>* and co-authors <span class="anon">(author list withheld for double-blind review)</span></p>
+      <p class="pub-venue">Under review, 2026</p>
+      <div class="pub-links">
+        <span class="plink muted">paper soon</span>
+        <button class="plink" type="button" data-open="pub-nav" data-index="0">videos</button>
+        <button class="plink" type="button" data-open="pub-nav" data-index="2">pipeline</button>
+      </div>
     </div>
   </article>
 
   <!-- ---------- ReDesign (ECCV 2026) ---------- -->
   <article class="pub" id="pub-redesign">
-    <div class="pub-head">
-      <div class="pub-meta">
-        <span class="venue">ECCV 2026</span>
-        <span class="tag">Agentic decomposition</span>
-        <span class="tag">Design understanding</span>
-      </div>
-      <h3 class="pub-title"><a href="https://jintae-00.github.io/ReDesign/" target="_blank" rel="noopener">ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition</a></h3>
-      <p class="authors">Jooyeol Yun<sup>*</sup>, <strong>Jintae Park<sup>*</sup></strong>, Hyesu Lim, Junha Hyung, Hyungjin Chung, Jaegul Choo</p>
-      <p class="abstract">
-        A flat image is a dead end: once the design file is lost, you cannot move an element, recolor a
-        shape, or fix a typo. ReDesign grows the design back. A vision-language controller expands an
-        editable layer hierarchy as a tree, coarse to fine, choosing tool-backed actions (text extraction,
-        multi-layer decomposition, connected-component labeling, detection and segmentation,
-        vectorization and typography) and verifying every step until each element is atomic. Text
-        layers, vector shapes, and grouped elements come back editable from a single image. We release
-        Figma-909, a benchmark of 909 real Figma Community designs, to evaluate both reconstruction
-        accuracy and editability.
-      </p>
-      <div class="links">
-        <a class="btn" href="https://arxiv.org/abs/2607.25565" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>arXiv</a>
-        <a class="btn" href="https://github.com/jintae-00/ReDesign" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>Code<span class="stat" title="GitHub stars"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.4l-6 3.4 1.3-6.7-5-4.6 6.8-.8L12 2.5z"/></svg><span id="gh-stars">205</span></span></a>
-        <a class="btn" href="https://jintae-00.github.io/ReDesign/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 9h-3a15.6 15.6 0 0 0-1.3-5.5A8 8 0 0 1 18.9 11zM12 4c.9 1.2 2 3.8 2.3 7H9.7C10 7.8 11.1 5.2 12 4zM5.1 11a8 8 0 0 1 4.3-5.5A15.6 15.6 0 0 0 8.1 11h-3zm0 2h3c.1 2 .6 3.9 1.3 5.5A8 8 0 0 1 5.1 13zM12 20c-.9-1.2-2-3.8-2.3-7h4.6c-.3 3.2-1.4 5.8-2.3 7zm2.6-1.5c.7-1.6 1.2-3.5 1.3-5.5h3a8 8 0 0 1-4.3 5.5z"/></svg>Project page</a>
-        <a class="btn" href="https://huggingface.co/datasets/Jintae-Park/ReDesign-Figma909" target="_blank" rel="noopener"><span class="hf" aria-hidden="true">🤗</span>Dataset<span class="stat" title="Total downloads on Hugging Face"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4L11 12.2V3zM4 19h16v2H4v-2z"/></svg>14,341</span></a>
-        <a class="btn" href="https://www.youtube.com/watch?v=OrcBSpADCGk&t=388s" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.3-1.6.4-3.2.4-4.8s-.1-3.2-.4-4.8zM9.7 15.1V8.9l6 3.1-6 3.1z"/></svg>Featured video<span class="stat" title="Views of the feature (AI Search)"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.5 0 9.5 4.6 10.8 7-1.3 2.4-5.3 7-10.8 7S2.5 14.4 1.2 12C2.5 9.6 6.5 5 12 5zm0 2C8 7 4.9 10 3.5 12 4.9 14 8 17 12 17s7.1-3 8.5-5C19.1 10 16 7 12 7zm0 1.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg>120k</span></a>
+    <div class="pub-media">
+      <div class="carousel" data-carousel aria-label="Media for ReDesign">
+        <div class="track">
+          <figure class="slide slide-vid" data-full="assets/video/redesign_intro.mp4" data-kind="video" data-caption="ReDesign intro video. Unmute for narration.">
+            <video muted loop playsinline preload="none" poster="assets/video/thumb_redesign_poster.jpg" data-autoplay><source src="assets/video/thumb_redesign.mp4" type="video/mp4"></video>
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/redesign_teaser.webp" data-kind="image" data-caption="From one flat image to a layer tree you can re-edit: rewrite text, swap theme, reflow layout.">
+            <img src="assets/figures/redesign_teaser.webp" alt="ReDesign teaser" loading="lazy" width="2200" height="1049">
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/redesign_method.webp" data-kind="image" data-caption="A VLM controller grows the design tree with five tool-backed actions and verifies each element before keeping it.">
+            <img src="assets/figures/redesign_method.webp" alt="ReDesign method" loading="lazy" width="2600" height="1779">
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/redesign_edit_quali.webp" data-kind="image" data-caption="Edits applied to recovered designs.">
+            <img src="assets/figures/redesign_edit_quali.webp" alt="ReDesign edit examples" loading="lazy" width="3200" height="2362">
+          </figure>
+        </div>
+        <button class="cnav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="cnav next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="dots" aria-hidden="true"></div>
       </div>
     </div>
-
-    <div class="pub-media">
-      <figure class="vid vid-16-9">
-        <video muted loop playsinline controls preload="metadata" poster="assets/video/redesign_intro_poster.jpg" data-autoplay>
-          <source src="assets/video/redesign_intro.mp4" type="video/mp4">
-        </video>
-        <figcaption>Intro video. Unmute for narration.</figcaption>
-      </figure>
-      <figure class="fig">
-        <a href="assets/figures/redesign_teaser.webp" target="_blank" rel="noopener"><img src="assets/figures/redesign_teaser.webp" alt="ReDesign teaser: from one flat poster image to a recovered layer tree, then rewritten text, swapped theme, and reflowed layout." loading="lazy" width="2200" height="1049"></a>
-        <figcaption>From one flat image to a layer tree you can re-edit: rewrite the text, swap the theme, reflow the layout.</figcaption>
-      </figure>
-      <details class="more">
-        <summary>More figures: agentic tree expansion, edit examples</summary>
-        <figure class="fig">
-          <a href="assets/figures/redesign_method.webp" target="_blank" rel="noopener"><img src="assets/figures/redesign_method.webp" alt="Method: a VLM controller expands the design tree with tool actions and verifies each node." loading="lazy" width="2600" height="1779"></a>
-          <figcaption>The controller grows the tree with five tool-backed actions and verifies each candidate element before it is kept.</figcaption>
-        </figure>
-        <figure class="fig">
-          <a href="assets/figures/redesign_edit_quali.webp" target="_blank" rel="noopener"><img src="assets/figures/redesign_edit_quali.webp" alt="Qualitative edit examples on recovered designs." loading="lazy" width="3200" height="2362"></a>
-          <figcaption>Edits applied to recovered designs.</figcaption>
-        </figure>
-      </details>
+    <div class="pub-body">
+      <h3 class="pub-title"><a href="https://jintae-00.github.io/ReDesign/" target="_blank" rel="noopener">ReDesign: Recovering Editable Design Structures from Images via Agentic Decomposition</a></h3>
+      <p class="pub-authors">Jooyeol Yun*, <u>Jintae Park</u>*, Hyesu Lim, Junha Hyung, Hyungjin Chung, Jaegul Choo</p>
+      <p class="pub-venue">European Conference on Computer Vision (ECCV), 2026</p>
+      <div class="pub-links">
+        <a class="plink" href="https://arxiv.org/abs/2607.25565" target="_blank" rel="noopener">paper</a>
+        <a class="plink" href="https://github.com/jintae-00/ReDesign" target="_blank" rel="noopener">code<span class="stat" title="GitHub stars"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.4l-6 3.4 1.3-6.7-5-4.6 6.8-.8L12 2.5z"/></svg><span id="gh-stars">205</span></span></a>
+        <a class="plink" href="https://jintae-00.github.io/ReDesign/" target="_blank" rel="noopener">project page</a>
+        <a class="plink" href="https://huggingface.co/datasets/Jintae-Park/ReDesign-Figma909" target="_blank" rel="noopener">dataset<span class="stat" title="Total downloads on Hugging Face"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4L11 12.2V3zM4 19h16v2H4v-2z"/></svg>14,341</span></a>
+        <a class="plink" href="https://www.youtube.com/watch?v=OrcBSpADCGk&t=388s" target="_blank" rel="noopener">youtube<span class="stat" title="Views of the feature"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.5 0 9.5 4.6 10.8 7-1.3 2.4-5.3 7-10.8 7S2.5 14.4 1.2 12C2.5 9.6 6.5 5 12 5zm0 2C8 7 4.9 10 3.5 12 4.9 14 8 17 12 17s7.1-3 8.5-5C19.1 10 16 7 12 7zm0 1.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg>120k</span></a>
+      </div>
     </div>
   </article>
 
   <!-- ---------- ODPG (VISAPP 2025 Oral) ---------- -->
   <article class="pub" id="pub-odpg">
-    <div class="pub-head">
-      <div class="pub-meta">
-        <span class="venue">VISAPP 2025 · Oral</span>
-        <span class="tag">Diffusion</span>
-        <span class="tag">Virtual try-on</span>
-      </div>
-      <h3 class="pub-title"><a href="https://arxiv.org/abs/2501.06769" target="_blank" rel="noopener">ODPG: Outfitting Diffusion with Pose Guided Condition</a></h3>
-      <p class="authors">Seohyun Lee<sup>*</sup>, <strong>Jintae Park<sup>*</sup></strong>, Sanghyeok Park</p>
-      <p class="abstract">
-        Virtual try-on without explicit garment warping. ODPG encodes the garment, the target pose, and
-        the person's appearance into latent features and injects them into a UNet denoiser through
-        pose-guided attention, so one end-to-end latent diffusion model dresses a person in a new
-        garment at a new pose while keeping texture detail. Evaluated on FashionTryOn and DeepFashion.
-      </p>
-      <div class="links">
-        <a class="btn" href="https://arxiv.org/abs/2501.06769" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>arXiv</a>
-        <a class="btn" href="https://github.com/jintae-00/ODPG_" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>Code</a>
+    <div class="pub-media">
+      <div class="carousel" data-carousel aria-label="Media for ODPG">
+        <div class="track">
+          <figure class="slide slide-img" data-full="assets/figures/odpg_ablation.webp" data-kind="image" data-caption="What each condition contributes: appearance, garment, doubled weights, and both combined.">
+            <img src="assets/figures/odpg_ablation.webp" alt="ODPG conditioning ablation" loading="lazy" width="1176" height="762">
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/odpg_quali.webp" data-kind="image" data-caption="Source image, target pose, target garment, generated image.">
+            <img src="assets/figures/odpg_quali.webp" alt="ODPG qualitative results" loading="lazy" width="1064" height="424">
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/odpg_pipeline.webp" data-kind="image" data-caption="Architecture. Garment, pose, and appearance features condition the denoiser through pose-guided attention.">
+            <img src="assets/figures/odpg_pipeline.webp" alt="ODPG architecture" loading="lazy" width="1044" height="732">
+          </figure>
+                    <figure class="slide slide-img" data-full="assets/figures/odpg_quali_gh.webp" data-kind="image" data-caption="Additional try-on results.">
+            <img src="assets/figures/odpg_quali_gh.webp" alt="ODPG additional results" loading="lazy" width="2880" height="1214">
+          </figure>
+        </div>
+        <button class="cnav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="cnav next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="dots" aria-hidden="true"></div>
       </div>
     </div>
-
-    <div class="pub-media">
-      <div class="gallery odpg-gallery">
-        <figure class="fig g-pipeline">
-          <a href="assets/figures/odpg_pipeline.webp" target="_blank" rel="noopener"><img src="assets/figures/odpg_pipeline.webp" alt="ODPG architecture: source, garment and pose encoders feeding a frozen-and-trainable UNet through pose-guided attention and a transformer decoder." loading="lazy" width="1044" height="732"></a>
-          <figcaption>Architecture. Garment, pose, and appearance features condition the denoiser through pose-guided attention.</figcaption>
-        </figure>
-        <figure class="fig g-quali">
-          <a href="assets/figures/odpg_quali.webp" target="_blank" rel="noopener"><img src="assets/figures/odpg_quali.webp" alt="Qualitative results: source image, target pose, target garment, generated image." loading="lazy" width="1064" height="424"></a>
-          <figcaption>Source, target pose, target garment, generated image.</figcaption>
-        </figure>
-        <figure class="fig g-ablation">
-          <a href="assets/figures/odpg_ablation.webp" target="_blank" rel="noopener"><img src="assets/figures/odpg_ablation.webp" alt="Conditioning ablation: appearance-only, garment-only, doubled weights, and combined conditions." loading="lazy" width="1176" height="762"></a>
-          <figcaption>What each condition contributes: appearance, garment, doubled weights, and both combined.</figcaption>
-        </figure>
+    <div class="pub-body">
+      <h3 class="pub-title"><a href="https://arxiv.org/abs/2501.06769" target="_blank" rel="noopener">ODPG: Outfitting Diffusion with Pose Guided Condition</a></h3>
+      <p class="pub-authors">Seohyun Lee*, <u>Jintae Park</u>*, Sanghyeok Park</p>
+      <p class="pub-venue">International Conference on Computer Vision Theory and Applications (VISAPP), 2025 · <strong>Oral</strong></p>
+      <div class="pub-links">
+        <a class="plink" href="https://arxiv.org/abs/2501.06769" target="_blank" rel="noopener">paper</a>
+        <a class="plink" href="https://github.com/jintae-00/ODPG_" target="_blank" rel="noopener">code</a>
       </div>
-      <details class="more">
-        <summary>More results</summary>
-        <figure class="fig">
-          <a href="assets/figures/odpg_quali_gh.webp" target="_blank" rel="noopener"><img src="assets/figures/odpg_quali_gh.webp" alt="Additional qualitative try-on results on DeepFashion." loading="lazy" width="2880" height="1214"></a>
-          <figcaption>Additional try-on results.</figcaption>
-        </figure>
-      </details>
     </div>
   </article>
 </section>
 
 <!-- ============================== EXPERIENCE ============================== -->
-<section class="wrap section" id="experience">
+<section class="section" id="experience">
   <h2 class="h2">Experience</h2>
   <ul class="rows">
     <li class="row">
-      <div class="logo-box"><img src="assets/logos/samsung.png" alt="Samsung" width="512" height="288"></div>
+      <span class="logo"><img src="assets/logos/samsung.png" alt="Samsung" width="512" height="288"></span>
       <div class="row-body">
-        <div class="row-top"><h3>Samsung Electronics</h3><time>Mar 2026 – Nov 2026</time></div>
-        <p class="role">Industry–academia research collaboration · Lead researcher</p>
-        <p>Building computer-vision models for automated wafer defect detection and root-cause analysis on production inspection data.</p>
+        <p class="row-title">Samsung Electronics <span class="row-sub">Research collaboration · Lead researcher</span></p>
       </div>
+      <time>Mar 2026 – Nov 2026</time>
     </li>
     <li class="row">
-      <div class="logo-box"><img src="assets/logos/kist.png" alt="KIST" width="585" height="524"></div>
+      <span class="logo"><img src="assets/logos/kist.png" alt="KIST" width="585" height="524"></span>
       <div class="row-body">
-        <div class="row-top"><h3>KIST 인공지능연구단 <span class="sub">Korea Institute of Science and Technology · AI Research Center</span></h3><time>Dec 2024 – Jun 2025</time></div>
-        <p class="role">Student researcher</p>
-        <p>Enhancing the spatial reasoning of navigation models: how a vision-language model's understanding of a scene can be turned into robot motion. This line of work grew into the navigation paper above.</p>
+        <p class="row-title">KIST 인공지능연구단 <span class="row-sub">Korea Institute of Science and Technology · Student researcher</span></p>
       </div>
+      <time>Dec 2024 – Jun 2025</time>
     </li>
     <li class="row">
-      <div class="logo-box"><img src="assets/logos/kaist_ai.svg" alt="KAIST AI" width="120" height="40"></div>
+      <span class="logo"><img src="assets/logos/kaist_ai.svg" alt="KAIST AI" width="120" height="40"></span>
       <div class="row-body">
-        <div class="row-top"><h3>KAIST AI</h3><time>Jun 2025 – Feb 2026</time></div>
-        <p class="role">Undergraduate research intern · Prof. Jaegul Choo</p>
-        <p>Agentic decomposition of design images (ReDesign) and early work on robot action policies.</p>
+        <p class="row-title">KAIST AI <span class="row-sub">Undergraduate research intern · Prof. Jaegul Choo</span></p>
       </div>
+      <time>Jun 2025 – Feb 2026</time>
     </li>
     <li class="row">
-      <div class="logo-box"><img src="assets/logos/rokaf.png" alt="Republic of Korea Air Force" width="400" height="400"></div>
+      <span class="logo"><img src="assets/logos/rokaf.png" alt="Republic of Korea Air Force" width="400" height="400"></span>
       <div class="row-body">
-        <div class="row-top"><h3>Republic of Korea Air Force</h3><time>Jul 2021 – Apr 2023</time></div>
-        <p class="role">Mandatory military service</p>
+        <p class="row-title">Republic of Korea Air Force <span class="row-sub">Mandatory military service</span></p>
       </div>
+      <time>Jul 2021 – Apr 2023</time>
     </li>
   </ul>
 </section>
 
 <!-- ============================== EDUCATION ============================== -->
-<section class="wrap section" id="education">
+<section class="section" id="education">
   <h2 class="h2">Education</h2>
   <ul class="rows">
     <li class="row">
-      <div class="logo-box"><img src="assets/logos/kaist_ai.svg" alt="KAIST AI" width="120" height="40"></div>
+      <span class="logo"><img src="assets/logos/kaist_ai.svg" alt="KAIST AI" width="120" height="40"></span>
       <div class="row-body">
-        <div class="row-top"><h3>KAIST · Kim Jaechul Graduate School of AI</h3><time>Mar 2026 – present</time></div>
-        <p class="role">Ph.D. student · Advisor: Prof. Jaegul Choo</p>
-        <p class="gpa">GPA 4.1 / 4.3</p>
+        <p class="row-title">KAIST, Kim Jaechul Graduate School of AI <span class="row-sub">Ph.D. student · Advisor: Prof. Jaegul Choo · GPA 4.1 / 4.3</span></p>
       </div>
+      <time>Mar 2026 – present</time>
     </li>
     <li class="row">
-      <div class="logo-box"><img src="assets/logos/korea_univ.png" alt="Korea University" width="641" height="211"></div>
+      <span class="logo"><img src="assets/logos/korea_univ.png" alt="Korea University" width="641" height="211"></span>
       <div class="row-body">
-        <div class="row-top"><h3>Korea University</h3><time>Mar 2019 – Feb 2026</time></div>
-        <p class="role">B.S. in Business Administration and Computer Science</p>
-        <p class="gpa">GPA 4.29 / 4.5</p>
+        <p class="row-title">Korea University <span class="row-sub">B.S. in Business Administration and Computer Science · GPA 4.29 / 4.5</span></p>
       </div>
+      <time>Mar 2019 – Feb 2026</time>
     </li>
   </ul>
 </section>
 
 <!-- ============================== AWARDS ============================== -->
-<section class="wrap section" id="awards">
-  <h2 class="h2">Awards &amp; Activities</h2>
+<section class="section" id="awards">
+  <h2 class="h2">Awards</h2>
   <ul class="awards">
-    <li><span class="award-name">Grand Prize (최우수상)</span><span>25th Campus CEO Startup Competition, Korea University</span></li>
-    <li><span class="award-name">1st place, research poster session</span><span>2024 KU AI Forum</span></li>
-    <li><span class="award-name">3rd place, final showcase</span><span>Future Tomorrow program, KU Technology Commercialization Center</span></li>
-    <li><span class="award-name">Industry project with SNOW</span><span>Retrieval-augmented generation on a vector database with Llama, KU Data Analysis Society</span></li>
-    <li><span class="award-name">Healthcare research with Kyobo Life</span><span>Industry–academia project, KU Center for Teaching and Learning</span></li>
+    <li><strong>Grand Prize (최우수상)</strong>, 25th Campus CEO Startup Competition, Korea University</li>
+    <li><strong>1st place</strong>, research poster session, 2024 KU AI Forum</li>
+    <li><strong>3rd place</strong>, final showcase, Future Tomorrow program, KU Technology Commercialization Center</li>
   </ul>
 </section>
 
+<footer class="foot">
+  <p>Jintae Park · <a href="mailto:sonjt00@kaist.ac.kr">sonjt00@kaist.ac.kr</a> · <a href="https://github.com/jintae-00" target="_blank" rel="noopener">github.com/jintae-00</a></p>
+  <p>Last updated September 2026</p>
+</footer>
+
 </main>
 
-<footer class="site-foot">
-  <div class="wrap foot-row">
-    <p>Jintae Park · <a href="mailto:sonjt00@kaist.ac.kr">sonjt00@kaist.ac.kr</a> · <a href="https://github.com/jintae-00" target="_blank" rel="noopener">github.com/jintae-00</a></p>
-    <p class="foot-note">Last updated September 2026.</p>
-  </div>
-</footer>
+<!-- Lightbox for full-size media -->
+<dialog class="lightbox" id="lightbox" aria-label="Media viewer">
+  <button class="lb-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <div class="lb-stage" id="lb-stage"></div>
+  <button class="lb-nav lb-next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  <p class="lb-caption" id="lb-caption"></p>
+</dialog>
 
 <script src="main.js" defer></script>
 </body>
