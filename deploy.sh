@@ -26,8 +26,15 @@ echo "Authenticated as $login"
 code="$(api -o /dev/null -w '%{http_code}' "https://api.github.com/repos/$OWNER/$REPO")"
 if [[ "$code" == "404" ]]; then
   echo "Creating $OWNER/$REPO ..."
-  api -X POST https://api.github.com/user/repos \
-    -d "{\"name\":\"$REPO\",\"description\":\"Personal site\",\"homepage\":\"https://$REPO/\",\"private\":false,\"has_wiki\":false,\"has_projects\":false}" >/dev/null
+  resp="$(api -X POST https://api.github.com/user/repos \
+    -d "{\"name\":\"$REPO\",\"description\":\"Personal site\",\"homepage\":\"https://$REPO/\",\"private\":false,\"has_wiki\":false,\"has_projects\":false}")"
+  if ! printf '%s' "$resp" | python3 -c 'import sys,json; d=json.load(sys.stdin); sys.exit(0 if d.get("full_name") else 1)'; then
+    echo "Could not create the repository with this token:" >&2
+    printf '%s\n' "$resp" | python3 -c 'import sys,json; print("  ", json.load(sys.stdin).get("message"))' >&2
+    echo "Fix: create an empty public repo named $REPO at https://github.com/new (no README)," >&2
+    echo "     make sure the token can access it (Contents: read/write, Pages: read/write), then rerun." >&2
+    exit 1
+  fi
 else
   echo "Repository exists (HTTP $code)."
 fi
