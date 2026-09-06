@@ -45,7 +45,7 @@
     </div>
     <p class="email">sonjt00@kaist.ac.kr</p>
     <p class="bio">
-      I'm a Ph.D. student at Kim Jaechul Graduate School of AI, KAIST, advised by Professor <a class="plain" href="https://sites.google.com/site/jaegulchoo/" target="_blank" rel="noopener">Jaegul Choo</a>.
+      I'm an M.S./Ph.D. student at KAIST AI, advised by Professor <a class="plain" href="https://sites.google.com/site/jaegulchoo/" target="_blank" rel="noopener">Jaegul Choo</a>.
       My current research interests lie in <strong>spatial reasoning for action policies</strong>, so that robots and agents can read a scene and act on it.
     </p>
     <ul class="keywords" aria-label="Current research interests">
@@ -64,18 +64,11 @@
   <!-- ---------- Under review: robot navigation ---------- -->
   <article class="pub" id="pub-nav">
     <div class="pub-media">
-      <div class="carousel" data-carousel aria-label="Media for the navigation paper">
+      <div class="carousel" data-carousel aria-label="Robot navigation video">
         <div class="track">
-          <figure class="slide slide-vid" data-full="assets/video/nav_grass_2x.mp4" data-kind="video" data-caption="Grass road at night, 2× speed. Instruction: “go behind the traffic cones avoiding the obstacles, never enter the grass.” Panels, left to right: third-person view · grounded semantic layers and cost map · fused map with candidate trajectories · bird's-eye trajectory scoring.">
-            <video muted loop playsinline autoplay preload="metadata" poster="assets/video/thumb_nav_grass_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_grass.mp4" type="video/mp4"></video>
+          <figure class="slide slide-vid" data-full="assets/video/nav_grass_focus.mp4" data-kind="video" data-caption="Real robot run at 2× speed. Left: third-person view. Right: the compact map with the candidate trajectories projected onto the camera view. Instruction: “go behind the traffic cones avoiding the obstacles, never enter the grass.”">
+            <video muted loop playsinline autoplay preload="auto" poster="assets/video/nav_grass_focus_poster.jpg" data-autoplay><source src="assets/video/nav_grass_focus.mp4" type="video/mp4"></video>
             <span class="badge">2×</span>
-          </figure>
-          <figure class="slide slide-vid" data-full="assets/video/nav_stone_2x.mp4" data-kind="video" data-caption="Stone plaza at night, 2× speed. Instruction: “avoid the chairs and go between the available cornerstones.”">
-            <video muted loop playsinline autoplay preload="metadata" poster="assets/video/thumb_nav_stone_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_stone.mp4" type="video/mp4"></video>
-            <span class="badge">2×</span>
-          </figure>
-          <figure class="slide slide-img" data-full="assets/figures/nav_pipeline.webp" data-kind="image" data-caption="Pipeline. Instruction-conditioned VLM judgments are grounded by detection and segmentation tools and composed into one map that conditions the trajectory decoders and scores their candidates.">
-            <img src="assets/figures/nav_pipeline.webp" alt="Pipeline figure" loading="lazy" width="2400" height="1215">
           </figure>
         </div>
         <button class="cnav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -84,7 +77,7 @@
       </div>
     </div>
     <div class="pub-body">
-      <h3 class="pub-title">Words to Waypoints: Real-Time Instruction-Following Navigation on a Quadruped Robot</h3>
+      <h3 class="pub-title">Compacting Vision-Language Semantics into an Actionable Space for Robot Navigation</h3>
       <p class="pub-authors">Co-first author</p>
       <p class="pub-venue">Under review, 2026</p>
       <div class="pub-links">
@@ -96,19 +89,10 @@
   <!-- ---------- ReDesign (ECCV 2026) ---------- -->
   <article class="pub" id="pub-redesign">
     <div class="pub-media">
-      <div class="carousel" data-carousel aria-label="Media for ReDesign">
+      <div class="carousel" data-carousel aria-label="ReDesign video">
         <div class="track">
           <figure class="slide slide-vid" data-full="assets/video/redesign_intro.mp4" data-kind="video" data-caption="ReDesign intro video, 2× speed. Unmute for narration." data-rate="2">
-            <video muted loop playsinline autoplay preload="metadata" poster="assets/video/thumb_redesign_poster.jpg" data-autoplay data-rate="2"><source src="assets/video/thumb_redesign.mp4" type="video/mp4"></video>
-          </figure>
-          <figure class="slide slide-img" data-full="assets/figures/redesign_teaser.webp" data-kind="image" data-caption="From one flat image to a layer tree you can re-edit: rewrite text, swap theme, reflow layout.">
-            <img src="assets/figures/redesign_teaser.webp" alt="ReDesign teaser" loading="lazy" width="2200" height="1049">
-          </figure>
-          <figure class="slide slide-img" data-full="assets/figures/redesign_method.webp" data-kind="image" data-caption="A VLM controller grows the design tree with five tool-backed actions and verifies each element before keeping it.">
-            <img src="assets/figures/redesign_method.webp" alt="ReDesign method" loading="lazy" width="2600" height="1779">
-          </figure>
-          <figure class="slide slide-img" data-full="assets/figures/redesign_edit_quali.webp" data-kind="image" data-caption="Edits applied to recovered designs.">
-            <img src="assets/figures/redesign_edit_quali.webp" alt="ReDesign edit examples" loading="lazy" width="3200" height="2362">
+            <video muted loop playsinline autoplay preload="auto" poster="assets/video/thumb_redesign_poster.jpg" data-autoplay data-rate="2"><source src="assets/video/thumb_redesign.mp4" type="video/mp4"></video>
           </figure>
         </div>
         <button class="cnav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -133,19 +117,10 @@
   <!-- ---------- ODPG (VISAPP 2025 Oral) ---------- -->
   <article class="pub" id="pub-odpg">
     <div class="pub-media">
-      <div class="carousel" data-carousel aria-label="Media for ODPG">
+      <div class="carousel" data-carousel aria-label="ODPG figures">
         <div class="track">
-          <figure class="slide slide-img" data-full="assets/figures/odpg_ablation.webp" data-kind="image" data-caption="What each condition contributes: appearance, garment, doubled weights, and both combined.">
-            <img src="assets/figures/odpg_ablation.webp" alt="ODPG conditioning ablation" loading="lazy" width="1176" height="762">
-          </figure>
-          <figure class="slide slide-img" data-full="assets/figures/odpg_quali.webp" data-kind="image" data-caption="Source image, target pose, target garment, generated image.">
-            <img src="assets/figures/odpg_quali.webp" alt="ODPG qualitative results" loading="lazy" width="1064" height="424">
-          </figure>
-          <figure class="slide slide-img" data-full="assets/figures/odpg_pipeline.webp" data-kind="image" data-caption="Architecture. Garment, pose, and appearance features condition the denoiser through pose-guided attention.">
-            <img src="assets/figures/odpg_pipeline.webp" alt="ODPG architecture" loading="lazy" width="1044" height="732">
-          </figure>
-                    <figure class="slide slide-img" data-full="assets/figures/odpg_quali_gh.webp" data-kind="image" data-caption="Additional try-on results.">
-            <img src="assets/figures/odpg_quali_gh.webp" alt="ODPG additional results" loading="lazy" width="2880" height="1214">
+          <figure class="slide slide-vid slide-light" data-full="assets/video/odpg_slides.mp4" data-kind="video" data-caption="ODPG: qualitative try-on results, architecture, conditioning ablation, and additional results.">
+            <video muted loop playsinline autoplay preload="auto" poster="assets/video/odpg_slides_poster.jpg" data-autoplay><source src="assets/video/odpg_slides.mp4" type="video/mp4"></video>
           </figure>
         </div>
         <button class="cnav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -173,7 +148,7 @@
       <h3 class="pub-title">Tackling Long-Horizon Robot Action Sparsity</h3>
       <p class="pub-authors">Co-first author</p>
       <p class="pub-venue">In progress, 2026</p>
-      <p class="pub-keys"><span>Long-horizon VLA failure</span><span>sparse robot &amp; object pose coverage</span><span>action-space underfitting</span><br><span>statistical bottleneck localisation</span><span>recovery trajectories</span><span>modular framework for learning better from training data</span></p>
+      <p class="pub-keys">Long-horizon VLA policies fail where training data covers robot and object poses too sparsely. We localise these bottlenecks statistically and synthesise recovery trajectories there, a modular framework for learning training data better.</p>
     </div>
   </article>
 </section>

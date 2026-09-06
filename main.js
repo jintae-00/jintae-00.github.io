@@ -45,7 +45,12 @@
       slides.forEach(function (s, j) {
         var v = s.querySelector('video');
         if (!v) return;
-        if (j === i && c._visible && !reduce) { if (v.preload === 'none') v.preload = 'auto'; v.playbackRate = parseFloat(v.getAttribute('data-rate') || '1'); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        if (j === i && c._visible && !reduce) {
+          if (v.preload === 'none') v.preload = 'auto';
+          v.playbackRate = parseFloat(v.getAttribute('data-rate') || '1');
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+          if (!v._retry) { v._retry = true; v.addEventListener('canplay', function () { if (c._visible && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } }); }
+        }
         else if (!v.paused) v.pause();
       });
     }
@@ -83,8 +88,8 @@
     // play the active video only while the carousel is on screen
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { c._visible = e.isIntersecting && e.intersectionRatio > 0.4; setActive(c._index); });
-      }, { threshold: [0, 0.4, 0.7] }).observe(c);
+        entries.forEach(function (e) { c._visible = e.isIntersecting; setActive(c._index); });
+      }, { threshold: [0, 0.01] }).observe(c);
     } else { c._visible = true; }
     setActive(0);
   });
