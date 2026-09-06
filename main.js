@@ -1,7 +1,7 @@
 /* Jintae Park — personal site
    1. palette variant switch (?design=a|b|c)  2. live GitHub star count
    3. media carousels (swipe / arrows / dots)  4. lightbox for full-size media
-   5. play videos only while visible           6. flip-book portrait */
+   5. play videos only while visible */
 (function () {
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -73,11 +73,12 @@
     c.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowRight') { e.preventDefault(); go(c._index + 1); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); go(c._index - 1); }
-      if (e.key === 'Enter') { e.preventDefault(); openLightbox(c, c._index); }
+      if (e.key === 'Enter' && !c.hasAttribute('data-nolightbox')) { e.preventDefault(); openLightbox(c, c._index); }
     });
 
-    // click a slide -> lightbox
-    slides.forEach(function (s, i) { s.addEventListener('click', function () { openLightbox(c, i); }); });
+    // click a slide -> lightbox (photo strip: just show the next photo)
+    var noLightbox = c.hasAttribute('data-nolightbox');
+    slides.forEach(function (s, i) { s.addEventListener('click', function () { if (noLightbox) go(i + 1); else openLightbox(c, i); }); });
 
     // play the active video only while the carousel is on screen
     if ('IntersectionObserver' in window) {
@@ -145,38 +146,4 @@
     });
   }
 
-  // ---- 6. flip book -------------------------------------------------------
-  var book = document.getElementById('book');
-  if (!book) return;
-  var pages = Array.prototype.slice.call(book.querySelectorAll('.page'));
-  var counter = document.getElementById('page-now');
-  var last = pages.length - 1;      // the last page never turns: nothing is behind it
-  var turned = 0;                   // how many pages are lying on the left
-  var hoverPeek = false;
-
-  function render() {
-    pages.forEach(function (p, i) {
-      var isTurned = i < turned || (hoverPeek && i === turned && turned < last);
-      p.classList.toggle('turned', isTurned);
-      p.style.zIndex = isTurned ? (10 + i) : (10 + (last - i));
-      p.style.setProperty('--z', (last - i + 1) + 'px');
-      p.style.setProperty('--zt', (-(i + 1)) + 'px');
-    });
-    var showing = Math.min(turned + (hoverPeek && turned < last ? 1 : 0), last);
-    if (counter) counter.textContent = String(showing + 1);
-    book.setAttribute('data-page', String(showing));
-    book.classList.toggle('at-end', turned >= last);
-  }
-  function advance() { hoverPeek = false; turned = turned >= last ? 0 : turned + 1; render(); }
-
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    book.addEventListener('mouseenter', function () { hoverPeek = true; render(); });
-    book.addEventListener('mouseleave', function () { hoverPeek = false; render(); });
-  }
-  book.addEventListener('click', advance);
-  book.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') { e.preventDefault(); advance(); }
-    if (e.key === 'ArrowLeft' && turned > 0) { e.preventDefault(); hoverPeek = false; turned -= 1; render(); }
-  });
-  render();
 })();
