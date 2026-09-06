@@ -21,6 +21,20 @@
   }
 
   // ---- 3. carousels -------------------------------------------------------
+  function playVideo(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  // watchdog: every 2 s, nudge any thumbnail video that is unexpectedly paused
+  setInterval(function () {
+    if (document.hidden || reduce) return;
+    Array.prototype.forEach.call(document.querySelectorAll('video[data-autoplay]'), function (v) {
+      var c = v.closest('[data-carousel]');
+      var active = !c || c._slides[c._index] === v.closest('.slide');
+      if (active && v.paused && v.readyState >= 2) playVideo(v);
+    });
+  }, 2000);
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) return;
+    Array.prototype.forEach.call(document.querySelectorAll('video[data-autoplay]'), function (v) { if (v.paused) playVideo(v); });
+  });
   var carousels = Array.prototype.slice.call(document.querySelectorAll('[data-carousel]'));
   carousels.forEach(function (c) {
     var track = c.querySelector('.track');
@@ -45,20 +59,20 @@
       slides.forEach(function (s, j) {
         var v = s.querySelector('video');
         if (!v) return;
-        if (j === i && c._visible && !reduce) {
-          if (v.preload === 'none') v.preload = 'auto';
+        if (j === i && !reduce) {
           v.playbackRate = parseFloat(v.getAttribute('data-rate') || '1');
-          var p = v.play(); if (p && p.catch) p.catch(function () {});
-          if (!v._retry) {
-            v._retry = true;
-            v.addEventListener('canplay', function () { if (c._visible && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } });
-            // belt and braces for the loop attribute: restart if a browser ever fires ended
-            v.addEventListener('ended', function () { v.currentTime = 0; var q = v.play(); if (q && q.catch) q.catch(function () {}); });
-            // resume after the tab comes back to the foreground
-            document.addEventListener('visibilitychange', function () { if (!document.hidden && c._visible && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } });
+          playVideo(v);
+          if (!v._armed) {
+            v._armed = true;
+            v.addEventListener('canplay', function () { if (v.paused) playVideo(v); });
+            v.addEventListener('loadedmetadata', function () { v.playbackRate = parseFloat(v.getAttribute('data-rate') || '1'); });
+            // the loop attribute should handle this; restart explicitly in case a browser fires ended
+            v.addEventListener('ended', function () { v.currentTime = 0; playVideo(v); });
+            v.addEventListener('pause', function () { if (!v.ended && !document.hidden) setTimeout(function () { if (v.paused) playVideo(v); }, 200); });
           }
+        } else if (!v.paused) {
+          v.pause();
         }
-        else if (!v.paused) v.pause();
       });
     }
     function go(i) {
@@ -92,12 +106,7 @@
     var noLightbox = c.hasAttribute('data-nolightbox');
     slides.forEach(function (s, i) { s.addEventListener('click', function () { if (noLightbox) go(i + 1); else openLightbox(c, i); }); });
 
-    // play the active video only while the carousel is on screen
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { c._visible = e.isIntersecting; setActive(c._index); });
-      }, { threshold: [0, 0.01] }).observe(c);
-    } else { c._visible = true; }
+    c._visible = true;
     setActive(0);
   });
 

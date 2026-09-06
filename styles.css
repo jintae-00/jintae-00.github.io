@@ -163,7 +163,7 @@ time { font-variant-numeric: tabular-nums; }
 .logo img { height: 36px; width: auto; max-width: 140px; object-fit: contain; object-position: left center; display: block; }
 .logo-lg img { height: 48px; }
 .logo-sm { justify-content: center; }
-.logo-sm img { height: 26px; object-position: center; }
+.logo-sm img { height: 52px; object-position: center; }
 .row-title { font-size: 15px; font-weight: 500; color: var(--ink); line-height: 1.5; }
 .row-sub { display: block; font-size: 14.4px; font-weight: 400; color: #666; }
 .row-desc { font-size: .8rem; color: var(--ink-3); margin-top: 2px; }
@@ -188,7 +188,7 @@ time { font-variant-numeric: tabular-nums; }
   .logo { width: 100px; height: 40px; }
   .logo img { height: 30px; max-width: 100px; }
   .logo-lg img { height: 36px; }
-  .logo-sm img { height: 22px; }
+  .logo-sm img { height: 40px; }
   .rows time { grid-column: 2; padding-top: 0; }
   .news li { grid-template-columns: 1fr; gap: 0; }
   .lb-caption { padding: 8px 14px 14px; }
