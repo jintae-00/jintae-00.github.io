@@ -26,9 +26,9 @@
     <div class="photo-stack">
       <div class="carousel photo" data-carousel data-nolightbox aria-label="Photos">
         <div class="track">
-          <figure class="slide slide-photo"><img src="assets/img/photo_kyoto.jpg" alt="Jintae Park in Kyoto" width="750" height="1000"></figure>
+          <figure class="slide slide-photo"><img src="assets/img/photo_robot.jpg" alt="Jintae Park working on a quadruped robot at night" width="750" height="1000"></figure>
           <figure class="slide slide-photo"><img src="assets/img/profile.jpg" alt="Portrait of Jintae Park" width="278" height="368" loading="lazy"></figure>
-          <figure class="slide slide-photo"><img src="assets/img/photo_robot.jpg" alt="Jintae Park working on a quadruped robot at night" width="750" height="1000" loading="lazy"></figure>
+          <figure class="slide slide-photo"><img src="assets/img/photo_kyoto.jpg" alt="Jintae Park in Kyoto" width="750" height="1000" loading="lazy"></figure>
         </div>
         <button class="cnav prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
         <button class="cnav next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -38,21 +38,21 @@
   </div>
 
   <div class="hero-info">
-    <h1 class="name">Jintae Park</h1>
+    <h1 class="name name-kaist">Jintae Park</h1>
     <div class="hero-links">
       <a href="https://github.com/jintae-00" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>GitHub</a>
       <a href="https://www.linkedin.com/in/jintae-park-130417353/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9h3v10zM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.9c0-1.2 0-2.7-1.6-2.7s-1.9 1.3-1.9 2.6V19h-3V9h2.9v1.4a3.2 3.2 0 0 1 2.8-1.6c3 0 3.6 2 3.6 4.6V19z"/></svg>LinkedIn</a>
     </div>
     <p class="email">sonjt00@kaist.ac.kr</p>
     <p class="bio">
-      I'm an M.S./Ph.D. student at KAIST AI, advised by Professor <a class="plain" href="https://sites.google.com/site/jaegulchoo/" target="_blank" rel="noopener">Jaegul Choo</a>.
+      I'm an M.S./Ph.D. student at KAIST AI, advised by Professor <a class="plain" href="https://sites.google.com/site/jaegulchoo/" target="_blank" rel="noopener">Jaegul Choo</a>.<br>
       My current research interests lie in <strong>spatial reasoning for action policies</strong>, so that robots and agents can read a scene and act on it.
     </p>
     <ul class="keywords" aria-label="Current research interests">
       <li>Spatial Reasoning</li>
       <li>Action Policies</li>
       <li>Robotics</li>
-      <li>Vision-Language Models</li>
+      <li>Agents</li>
     </ul>
   </div>
 </header>
@@ -66,7 +66,7 @@
     <div class="pub-media">
       <div class="carousel" data-carousel aria-label="Robot navigation video">
         <div class="track">
-          <figure class="slide slide-vid" data-full="assets/video/nav_grass_focus.mp4" data-kind="video" data-caption="Real robot run at 2× speed. Left: third-person view. Right: the compact map with the candidate trajectories projected onto the camera view. Instruction: “go behind the traffic cones avoiding the obstacles, never enter the grass.”">
+          <figure class="slide slide-vid" data-full="assets/video/nav_grass_focus.mp4" data-kind="video" data-caption="Real robot run at 2× speed. Left: third-person view. Right: the compact map with candidate trajectories projected onto the camera view. Instruction: “go behind the traffic cones avoiding the obstacles, never enter the grass.”">
             <video muted loop playsinline autoplay preload="auto" poster="assets/video/nav_grass_focus_poster.jpg" data-autoplay><source src="assets/video/nav_grass_focus.mp4" type="video/mp4"></video>
             <span class="badge">2×</span>
           </figure>
@@ -106,10 +106,10 @@
       <p class="pub-venue">European Conference on Computer Vision (ECCV), 2026</p>
       <div class="pub-links">
         <a class="plink t-paper" href="https://arxiv.org/abs/2607.25565" target="_blank" rel="noopener"><svg class="li ic-arxiv" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>paper</a>
-        <a class="plink t-code" href="https://github.com/jintae-00/ReDesign" target="_blank" rel="noopener"><svg class="li ic-github" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>code<span class="stat" title="GitHub stars"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.4l-6 3.4 1.3-6.7-5-4.6 6.8-.8L12 2.5z"/></svg><span id="gh-stars">205</span></span></a>
+        <a class="plink t-code" href="https://github.com/jintae-00/ReDesign" target="_blank" rel="noopener"><svg class="li ic-github" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>code<span class="stat" title="GitHub stars"><svg class="i-s star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.4l-6 3.4 1.3-6.7-5-4.6 6.8-.8L12 2.5z"/></svg><span id="gh-stars">205</span></span></a>
         <a class="plink t-web" href="https://jintae-00.github.io/ReDesign/" target="_blank" rel="noopener"><svg class="li ic-web" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 9h-3a15.6 15.6 0 0 0-1.3-5.5A8 8 0 0 1 18.9 11zM12 4c.9 1.2 2 3.8 2.3 7H9.7C10 7.8 11.1 5.2 12 4zM5.1 11a8 8 0 0 1 4.3-5.5A15.6 15.6 0 0 0 8.1 11h-3zm0 2h3c.1 2 .6 3.9 1.3 5.5A8 8 0 0 1 5.1 13zM12 20c-.9-1.2-2-3.8-2.3-7h4.6c-.3 3.2-1.4 5.8-2.3 7zm2.6-1.5c.7-1.6 1.2-3.5 1.3-5.5h3a8 8 0 0 1-4.3 5.5z"/></svg>project page</a>
-        <a class="plink t-data" href="https://huggingface.co/datasets/Jintae-Park/ReDesign-Figma909" target="_blank" rel="noopener">dataset<span class="stat" title="Total downloads on Hugging Face"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4L11 12.2V3zM4 19h16v2H4v-2z"/></svg>14,341</span></a>
-        <a class="plink t-yt" href="https://www.youtube.com/watch?v=OrcBSpADCGk&t=388s" target="_blank" rel="noopener">youtube<span class="stat" title="Views of the feature"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.5 0 9.5 4.6 10.8 7-1.3 2.4-5.3 7-10.8 7S2.5 14.4 1.2 12C2.5 9.6 6.5 5 12 5zm0 2C8 7 4.9 10 3.5 12 4.9 14 8 17 12 17s7.1-3 8.5-5C19.1 10 16 7 12 7zm0 1.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg>120k</span></a>
+        <a class="plink t-data" href="https://huggingface.co/datasets/Jintae-Park/ReDesign-Figma909" target="_blank" rel="noopener"><img class="li li-img" src="assets/logos/hf.svg" alt="" aria-hidden="true">dataset<span class="stat" title="Total downloads on Hugging Face"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4L11 12.2V3zM4 19h16v2H4v-2z"/></svg>14,341</span></a>
+        <a class="plink t-yt" href="https://www.youtube.com/watch?v=OrcBSpADCGk&t=388s" target="_blank" rel="noopener"><svg class="li ic-yt" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.3-1.6.4-3.2.4-4.8s-.1-3.2-.4-4.8zM9.7 15.1V8.9l6 3.1-6 3.1z"/></svg>youtube<span class="stat" title="Views of the feature"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.5 0 9.5 4.6 10.8 7-1.3 2.4-5.3 7-10.8 7S2.5 14.4 1.2 12C2.5 9.6 6.5 5 12 5zm0 2C8 7 4.9 10 3.5 12 4.9 14 8 17 12 17s7.1-3 8.5-5C19.1 10 16 7 12 7zm0 1.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg>120k</span></a>
       </div>
     </div>
   </article>
@@ -148,7 +148,7 @@
       <h3 class="pub-title">Tackling Long-Horizon Robot Action Sparsity</h3>
       <p class="pub-authors">Co-first author</p>
       <p class="pub-venue">In progress, 2026</p>
-      <p class="pub-keys">Long-horizon VLA policies fail where training data covers robot and object poses too sparsely. We localise these bottlenecks statistically and synthesise recovery trajectories there, a modular framework for learning training data better.</p>
+      <p class="pub-keys">Long-horizon VLA policies fail where training data covers robot and object poses too sparsely. We localise these bottlenecks statistically and synthesise recovery trajectories there, as a modular framework.</p>
     </div>
   </article>
 </section>

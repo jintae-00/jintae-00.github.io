@@ -49,7 +49,14 @@
           if (v.preload === 'none') v.preload = 'auto';
           v.playbackRate = parseFloat(v.getAttribute('data-rate') || '1');
           var p = v.play(); if (p && p.catch) p.catch(function () {});
-          if (!v._retry) { v._retry = true; v.addEventListener('canplay', function () { if (c._visible && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } }); }
+          if (!v._retry) {
+            v._retry = true;
+            v.addEventListener('canplay', function () { if (c._visible && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } });
+            // belt and braces for the loop attribute: restart if a browser ever fires ended
+            v.addEventListener('ended', function () { v.currentTime = 0; var q = v.play(); if (q && q.catch) q.catch(function () {}); });
+            // resume after the tab comes back to the foreground
+            document.addEventListener('visibilitychange', function () { if (!document.hidden && c._visible && v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); } });
+          }
         }
         else if (!v.paused) v.pause();
       });
