@@ -90,7 +90,7 @@ time { font-variant-numeric: tabular-nums; }
 .news strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- publications ---------- */
-.pub { display: flex; gap: 24px; align-items: flex-start; padding: 28px 0; border-bottom: 1px solid var(--line-2); }
+.pub { display: flex; gap: 24px; align-items: flex-start; padding: 19px 0; border-bottom: 1px solid var(--line-2); }
 .pub:last-child { border-bottom: none; }
 .pub-text { padding: 6px 0 10px; }
 .pub-media { flex: 0 0 var(--media-w); width: var(--media-w); }
