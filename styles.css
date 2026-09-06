@@ -157,16 +157,16 @@ time { font-variant-numeric: tabular-nums; }
 .lb-close svg, .lb-nav svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ---------- experience / education ---------- */
-.rows li { display: grid; grid-template-columns: 140px minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-2); }
+.rows li { display: grid; grid-template-columns: 132px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line-2); }
 .rows li:last-child { border-bottom: none; }
-.logo { width: 140px; height: 50px; display: flex; align-items: center; justify-content: flex-start; background: transparent; border: 0; border-radius: 0; padding: 0; }
+.logo { width: 132px; height: 50px; display: flex; align-items: center; justify-content: flex-start; background: transparent; border: 0; border-radius: 0; padding: 0; }
 .logo img { height: 36px; width: auto; max-width: 140px; object-fit: contain; object-position: left center; display: block; }
 .logo-lg img { height: 48px; }
 .logo-sm { justify-content: center; }
 .logo-sm img { height: 52px; object-position: center; }
 .row-title { font-size: 15px; font-weight: 500; color: var(--ink); line-height: 1.5; }
 .row-sub { display: block; font-size: 14.4px; font-weight: 400; color: #666; }
-.row-desc { font-size: 14.4px; color: var(--ink); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-desc { font-size: 13.5px; color: var(--ink); margin-top: 1px; }
 .rows time { font-size: 14.4px; color: var(--ink-3); white-space: nowrap; padding-top: .1em; }
 
 /* ---------- awards ---------- */
