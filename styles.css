@@ -166,7 +166,7 @@ time { font-variant-numeric: tabular-nums; }
 .logo-sm img { height: 52px; object-position: center; }
 .row-title { font-size: 15px; font-weight: 500; color: var(--ink); line-height: 1.5; }
 .row-sub { display: block; font-size: 14.4px; font-weight: 400; color: #666; }
-.row-desc { font-size: .8rem; color: var(--ink-3); margin-top: 2px; }
+.row-desc { font-size: 14.4px; color: var(--ink); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rows time { font-size: 14.4px; color: var(--ink-3); white-space: nowrap; padding-top: .1em; }
 
 /* ---------- awards ---------- */
