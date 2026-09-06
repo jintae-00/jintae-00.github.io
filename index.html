@@ -21,6 +21,24 @@
 
 <!-- ============================== HERO ============================== -->
 <header class="hero">
+  <!-- Portrait photos: swipe or click to see the next one -->
+  <div class="hero-photo">
+    <div class="photo-stack">
+      <span class="edge edge-2" aria-hidden="true"></span>
+      <span class="edge edge-1" aria-hidden="true"></span>
+      <div class="carousel photo" data-carousel data-nolightbox aria-label="Photos">
+        <div class="track">
+          <figure class="slide slide-photo"><img src="assets/img/profile.jpg" alt="Portrait of Jintae Park" width="278" height="368"></figure>
+          <figure class="slide slide-photo"><img src="assets/img/photo_robot.jpg" alt="Jintae Park working on a quadruped robot at night" width="750" height="1000" loading="lazy"></figure>
+          <figure class="slide slide-photo"><img src="assets/img/photo_kyoto.jpg" alt="Jintae Park in Kyoto" width="750" height="1000" loading="lazy"></figure>
+        </div>
+        <button class="cnav prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="cnav next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="dots" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="hero-info">
     <h1 class="name">Jintae Park</h1>
     <p class="affil">Integrated M.S./Ph.D. at KAIST AI, DAVIAN Lab, advised by Prof. Jaegul Choo.</p>
@@ -31,65 +49,36 @@
       <a href="https://huggingface.co/Jintae-Park" target="_blank" rel="noopener"><span class="hf" aria-hidden="true">🤗</span>Hugging Face</a>
     </div>
     <p class="bio">
-      I'm a Ph.D. student at Kim Jaechul Graduate School of AI, KAIST, advised by Professor <a href="https://sites.google.com/site/jaegulchoo/" target="_blank" rel="noopener">Jaegul Choo</a>.
-      My research interest lies in <strong>spatial reasoning for action policies</strong>, so that robots and agents can read a scene and act on it.
+      I'm a Ph.D. student at Kim Jaechul Graduate School of AI, KAIST, advised by Professor <a class="plain" href="https://sites.google.com/site/jaegulchoo/" target="_blank" rel="noopener">Jaegul Choo</a>.
+      My current research interests lie in <strong>spatial reasoning for action policies</strong>, so that robots and agents can read a scene and act on it.
     </p>
-    <ul class="keywords" aria-label="Research keywords">
-      <li>Spatial Reasoning for Action Policies</li>
+    <ul class="keywords" aria-label="Current research interests">
+      <li>Spatial Reasoning</li>
+      <li>Action Policies</li>
       <li>Robotics</li>
       <li>Agentic AI</li>
-      <li>Long-horizon Action Policies</li>
+      <li>Long-horizon Policies</li>
       <li>Vision-Language Models</li>
     </ul>
   </div>
-
-  <!-- Portrait photos: swipe or click to see the next one -->
-  <div class="hero-photo">
-    <div class="photo-stack">
-      <span class="edge edge-2" aria-hidden="true"></span>
-      <span class="edge edge-1" aria-hidden="true"></span>
-      <div class="carousel photo" data-carousel data-nolightbox aria-label="Photos">
-        <div class="track">
-          <figure class="slide slide-photo"><img src="assets/img/profile.jpg" alt="Portrait of Jintae Park" width="278" height="368"></figure>
-          <figure class="slide slide-photo"><img src="assets/img/robot_grass.jpg" alt="Quadruped robot on a campus path at night" width="600" height="800" loading="lazy"></figure>
-          <figure class="slide slide-photo"><img src="assets/img/robot_stone.jpg" alt="Quadruped robot on a stone plaza at night" width="600" height="800" loading="lazy"></figure>
-        </div>
-        <button class="cnav prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button class="cnav next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-        <div class="dots" aria-hidden="true"></div>
-      </div>
-    </div>
-  </div>
 </header>
-
-<!-- ============================== NEWS ============================== -->
-<section class="section" id="news">
-  <h2 class="h2">News</h2>
-  <ul class="news">
-    <li><time>Sep 2026</time><span>New paper on real-time, language-grounded quadruped navigation is under review.</span></li>
-    <li><time>Jul 2026</time><span><a href="#pub-redesign">ReDesign</a> accepted to <strong>ECCV 2026</strong>.</span></li>
-    <li><time>Mar 2026</time><span>Started at KAIST AI. Began a research collaboration with Samsung Electronics.</span></li>
-    <li><time>Feb 2025</time><span><a href="#pub-odpg">ODPG</a> presented as an <strong>oral</strong> at VISAPP 2025.</span></li>
-    <li><time>Dec 2024</time><span>Joined the KIST Center for Artificial Intelligence as a student researcher.</span></li>
-  </ul>
-</section>
 
 <!-- ============================== PUBLICATIONS ============================== -->
 <section class="section" id="publications">
   <h2 class="h2">Publications <span class="h2-note">* equal contribution</span></h2>
 
   <!-- ---------- Under review: robot navigation ---------- -->
-  <article class="pub" id="pub-nav">
+  <article class="pub pub-wide" id="pub-nav">
     <div class="pub-media">
       <div class="carousel" data-carousel aria-label="Media for the navigation paper">
         <div class="track">
-          <figure class="slide slide-vid" data-full="assets/video/nav_grass_4x.mp4" data-kind="video" data-caption="Grass road at night, 4× speed. Instruction: “go behind the traffic cones avoiding the obstacles, never enter the grass.” Panels: third-person view · grounded semantic layers and cost map · fused map with candidate trajectories · bird's-eye scoring.">
-            <video muted loop playsinline preload="none" poster="assets/video/thumb_nav_grass_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_grass.mp4" type="video/mp4"></video>
-            <span class="badge">4×</span>
+          <figure class="slide slide-vid" data-full="assets/video/nav_grass_2x.mp4" data-kind="video" data-caption="Grass road at night, 2× speed. Instruction: “go behind the traffic cones avoiding the obstacles, never enter the grass.” Panels, left to right: third-person view · grounded semantic layers and cost map · fused map with candidate trajectories · bird's-eye trajectory scoring.">
+            <video muted loop playsinline autoplay preload="metadata" poster="assets/video/thumb_nav_grass_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_grass.mp4" type="video/mp4"></video>
+            <span class="badge">2×</span>
           </figure>
-          <figure class="slide slide-vid" data-full="assets/video/nav_stone_4x.mp4" data-kind="video" data-caption="Stone plaza at night, 4× speed. Instruction: “avoid the chairs and go between the available cornerstones.”">
-            <video muted loop playsinline preload="none" poster="assets/video/thumb_nav_stone_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_stone.mp4" type="video/mp4"></video>
-            <span class="badge">4×</span>
+          <figure class="slide slide-vid" data-full="assets/video/nav_stone_2x.mp4" data-kind="video" data-caption="Stone plaza at night, 2× speed. Instruction: “avoid the chairs and go between the available cornerstones.”">
+            <video muted loop playsinline autoplay preload="metadata" poster="assets/video/thumb_nav_stone_poster.jpg" data-autoplay><source src="assets/video/thumb_nav_stone.mp4" type="video/mp4"></video>
+            <span class="badge">2×</span>
           </figure>
           <figure class="slide slide-img" data-full="assets/figures/nav_pipeline.webp" data-kind="image" data-caption="Pipeline. Instruction-conditioned VLM judgments are grounded by detection and segmentation tools and composed into one map that conditions the trajectory decoders and scores their candidates.">
             <img src="assets/figures/nav_pipeline.webp" alt="Pipeline figure" loading="lazy" width="2400" height="1215">
@@ -101,13 +90,13 @@
       </div>
     </div>
     <div class="pub-body">
-      <h3 class="pub-title">From Instruction to Motion: Real-Time Language-Grounded Navigation on a Quadruped Robot</h3>
+      <h3 class="pub-title">Compact Semantic Maps from Vision-Language Constraints for Real-Time Robot Navigation</h3>
       <p class="pub-authors"><u>Jintae Park</u>* and co-authors <span class="anon">(author list withheld for double-blind review)</span></p>
       <p class="pub-venue">Under review, 2026</p>
       <div class="pub-links">
-        <span class="plink muted">paper soon</span>
-        <button class="plink" type="button" data-open="pub-nav" data-index="0">videos</button>
-        <button class="plink" type="button" data-open="pub-nav" data-index="2">pipeline</button>
+        <span class="plink muted"><svg class="li ic-arxiv" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>paper soon</span>
+        <button class="plink" type="button" data-open="pub-nav" data-index="0"><svg class="li ic-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 6.3 3.2l13 7.5a1.5 1.5 0 0 1 0 2.6l-13 7.5A1.5 1.5 0 0 1 4 19.5v-15z"/></svg>videos</button>
+        <button class="plink" type="button" data-open="pub-nav" data-index="2"><svg class="li ic-pipe" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h6v5H3V4zm12 0h6v5h-6V4zM9 15h6v5H9v-5zM6 9v2.5h12V9h-1.5v1H7.5V9H6zm5 2.5V15h2v-3.5h-2z"/></svg>pipeline</button>
       </div>
     </div>
   </article>
@@ -117,8 +106,8 @@
     <div class="pub-media">
       <div class="carousel" data-carousel aria-label="Media for ReDesign">
         <div class="track">
-          <figure class="slide slide-vid" data-full="assets/video/redesign_intro.mp4" data-kind="video" data-caption="ReDesign intro video. Unmute for narration.">
-            <video muted loop playsinline preload="none" poster="assets/video/thumb_redesign_poster.jpg" data-autoplay><source src="assets/video/thumb_redesign.mp4" type="video/mp4"></video>
+          <figure class="slide slide-vid" data-full="assets/video/redesign_intro.mp4" data-kind="video" data-caption="ReDesign intro video, 2× speed. Unmute for narration." data-rate="2">
+            <video muted loop playsinline autoplay preload="metadata" poster="assets/video/thumb_redesign_poster.jpg" data-autoplay data-rate="2"><source src="assets/video/thumb_redesign.mp4" type="video/mp4"></video>
           </figure>
           <figure class="slide slide-img" data-full="assets/figures/redesign_teaser.webp" data-kind="image" data-caption="From one flat image to a layer tree you can re-edit: rewrite text, swap theme, reflow layout.">
             <img src="assets/figures/redesign_teaser.webp" alt="ReDesign teaser" loading="lazy" width="2200" height="1049">
@@ -140,9 +129,9 @@
       <p class="pub-authors">Jooyeol Yun*, <u>Jintae Park</u>*, Hyesu Lim, Junha Hyung, Hyungjin Chung, Jaegul Choo</p>
       <p class="pub-venue">European Conference on Computer Vision (ECCV), 2026</p>
       <div class="pub-links">
-        <a class="plink" href="https://arxiv.org/abs/2607.25565" target="_blank" rel="noopener">paper</a>
-        <a class="plink" href="https://github.com/jintae-00/ReDesign" target="_blank" rel="noopener">code<span class="stat" title="GitHub stars"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.4l-6 3.4 1.3-6.7-5-4.6 6.8-.8L12 2.5z"/></svg><span id="gh-stars">205</span></span></a>
-        <a class="plink" href="https://jintae-00.github.io/ReDesign/" target="_blank" rel="noopener">project page</a>
+        <a class="plink" href="https://arxiv.org/abs/2607.25565" target="_blank" rel="noopener"><svg class="li ic-arxiv" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>paper</a>
+        <a class="plink" href="https://github.com/jintae-00/ReDesign" target="_blank" rel="noopener"><svg class="li ic-github" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>code<span class="stat" title="GitHub stars"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.6 1.3 6.7L12 17.4l-6 3.4 1.3-6.7-5-4.6 6.8-.8L12 2.5z"/></svg><span id="gh-stars">205</span></span></a>
+        <a class="plink" href="https://jintae-00.github.io/ReDesign/" target="_blank" rel="noopener"><svg class="li ic-web" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 9h-3a15.6 15.6 0 0 0-1.3-5.5A8 8 0 0 1 18.9 11zM12 4c.9 1.2 2 3.8 2.3 7H9.7C10 7.8 11.1 5.2 12 4zM5.1 11a8 8 0 0 1 4.3-5.5A15.6 15.6 0 0 0 8.1 11h-3zm0 2h3c.1 2 .6 3.9 1.3 5.5A8 8 0 0 1 5.1 13zM12 20c-.9-1.2-2-3.8-2.3-7h4.6c-.3 3.2-1.4 5.8-2.3 7zm2.6-1.5c.7-1.6 1.2-3.5 1.3-5.5h3a8 8 0 0 1-4.3 5.5z"/></svg>project page</a>
         <a class="plink" href="https://huggingface.co/datasets/Jintae-Park/ReDesign-Figma909" target="_blank" rel="noopener">dataset<span class="stat" title="Total downloads on Hugging Face"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v9.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4L11 12.2V3zM4 19h16v2H4v-2z"/></svg>14,341</span></a>
         <a class="plink" href="https://www.youtube.com/watch?v=OrcBSpADCGk&t=388s" target="_blank" rel="noopener">youtube<span class="stat" title="Views of the feature"><svg class="i-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5.5 0 9.5 4.6 10.8 7-1.3 2.4-5.3 7-10.8 7S2.5 14.4 1.2 12C2.5 9.6 6.5 5 12 5zm0 2C8 7 4.9 10 3.5 12 4.9 14 8 17 12 17s7.1-3 8.5-5C19.1 10 16 7 12 7zm0 1.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg>120k</span></a>
       </div>
@@ -177,8 +166,8 @@
       <p class="pub-authors">Seohyun Lee*, <u>Jintae Park</u>*, Sanghyeok Park</p>
       <p class="pub-venue">International Conference on Computer Vision Theory and Applications (VISAPP), 2025 · <strong>Oral</strong></p>
       <div class="pub-links">
-        <a class="plink" href="https://arxiv.org/abs/2501.06769" target="_blank" rel="noopener">paper</a>
-        <a class="plink" href="https://github.com/jintae-00/ODPG_" target="_blank" rel="noopener">code</a>
+        <a class="plink" href="https://arxiv.org/abs/2501.06769" target="_blank" rel="noopener"><svg class="li ic-arxiv" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8 12h8v1.5H8V12zm0 3.5h8V17H8v-1.5z"/></svg>paper</a>
+        <a class="plink" href="https://github.com/jintae-00/ODPG_" target="_blank" rel="noopener"><svg class="li ic-github" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg>code</a>
       </div>
     </div>
   </article>
@@ -191,7 +180,7 @@
     <li class="row">
       <span class="logo"><img src="assets/logos/samsung.png" alt="Samsung" width="512" height="288"></span>
       <div class="row-body">
-        <p class="row-title">Samsung Electronics <span class="row-sub">Research collaboration · Lead researcher</span></p>
+        <p class="row-title">Samsung Electronics <span class="row-sub">Industry–academia research collaboration · Core researcher</span></p>
       </div>
       <time>Mar 2026 – Nov 2026</time>
     </li>
@@ -226,14 +215,14 @@
     <li class="row">
       <span class="logo"><img src="assets/logos/kaist_ai.svg" alt="KAIST AI" width="120" height="40"></span>
       <div class="row-body">
-        <p class="row-title">KAIST, Kim Jaechul Graduate School of AI <span class="row-sub">Ph.D. student · Advisor: Prof. Jaegul Choo · GPA 4.1 / 4.3</span></p>
+        <p class="row-title">KAIST AI <span class="row-sub">Integrated M.S./Ph.D. · Advisor: Prof. Jaegul Choo · GPA 4.1 / 4.3</span></p>
       </div>
       <time>Mar 2026 – present</time>
     </li>
     <li class="row">
       <span class="logo"><img src="assets/logos/korea_univ.png" alt="Korea University" width="641" height="211"></span>
       <div class="row-body">
-        <p class="row-title">Korea University <span class="row-sub">B.S. in Business Administration and Computer Science · GPA 4.29 / 4.5</span></p>
+        <p class="row-title">Korea University <span class="row-sub">B.S. in Business, Computer Science (double major) · GPA 4.29 / 4.5</span></p>
       </div>
       <time>Mar 2019 – Feb 2026</time>
     </li>
@@ -245,8 +234,8 @@
   <h2 class="h2">Awards</h2>
   <ul class="awards">
     <li><strong>Grand Prize</strong>, 25th Campus CEO Startup Competition, Korea University</li>
-    <li><strong>1st place</strong>, research poster session, 2024 KU AI Forum</li>
-    <li><strong>3rd place</strong>, final showcase, Future Tomorrow program, KU Technology Commercialization Center</li>
+    <li><strong>1st place</strong>, research poster session, 2024 Korea University AI Forum</li>
+    <li><strong>3rd place</strong>, Startup Competition, Korea University Technology Commercialization Center</li>
   </ul>
 </section>
 

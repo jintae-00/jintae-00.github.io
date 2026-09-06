@@ -45,7 +45,7 @@
       slides.forEach(function (s, j) {
         var v = s.querySelector('video');
         if (!v) return;
-        if (j === i && c._visible && !reduce) { if (v.preload === 'none') v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        if (j === i && c._visible && !reduce) { if (v.preload === 'none') v.preload = 'auto'; v.playbackRate = parseFloat(v.getAttribute('data-rate') || '1'); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
         else if (!v.paused) v.pause();
       });
     }
@@ -112,6 +112,8 @@
     if (kind === 'video') {
       el = document.createElement('video');
       el.src = src; el.controls = true; el.autoplay = true; el.loop = true; el.muted = true; el.playsInline = true;
+      el.playbackRate = parseFloat(s.getAttribute('data-rate') || '1');
+      el.addEventListener('loadedmetadata', function () { el.playbackRate = parseFloat(s.getAttribute('data-rate') || '1'); });
       var poster = s.querySelector('video') && s.querySelector('video').getAttribute('poster');
       if (poster) el.poster = poster;
     } else {

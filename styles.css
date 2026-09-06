@@ -77,15 +77,16 @@ time { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .hero-links a:hover { color: var(--accent-ink); text-decoration: none; }
 .bio { margin-top: 14px; font-size: .93rem; color: var(--ink-2); }
 .bio strong { color: var(--ink); font-weight: 600; }
+.bio a.plain { color: inherit; }
 
 /* ---------- portrait photos ---------- */
-.hero-photo { flex: none; width: var(--photo-w); }
+.hero-photo { flex: none; width: var(--photo-w); max-width: 100%; }
 .photo-stack { position: relative; }
 .photo-stack .edge { position: absolute; inset: 0; border-radius: 8px; border: 1px solid var(--paper-edge); background: var(--paper); pointer-events: none; }
 .photo-stack .edge-1 { transform: translate(4px, 4px); }
 .photo-stack .edge-2 { transform: translate(8px, 8px); opacity: .75; }
 .photo-stack .carousel { position: relative; z-index: 1; }
-.slide-photo { aspect-ratio: 3 / 4; cursor: pointer; background: var(--media-bg); }
+.carousel.photo .slide { aspect-ratio: 3 / 4; cursor: pointer; background: var(--media-bg); }
 .slide-photo img { object-fit: cover; }
 .carousel.photo .cnav { width: 22px; height: 22px; }
 .carousel.photo .cnav svg { width: 12px; height: 12px; }
@@ -117,12 +118,19 @@ time { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .stat { display: inline-flex; align-items: center; gap: 2px; margin-left: 3px; padding-left: 6px; border-left: 1px solid var(--line); font-family: var(--font-mono); font-size: .68rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .plink:hover .stat { color: inherit; }
 
+/* wide variant: the four-panel robot runs need the whole strip visible */
+.pub-wide { --media-w: 460px; }
+.pub-wide .slide { aspect-ratio: 1920 / 560; }
+.pub-wide .slide-vid video { object-fit: contain; }
+.pub-wide .badge { top: 5px; left: 5px; }
+.pub-wide .dots { bottom: 4px; }
+
 /* carousel */
 .carousel { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--line-2); background: var(--card); box-shadow: var(--shadow); outline-offset: 3px; }
 .track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -ms-overflow-style: none; overscroll-behavior-x: contain; }
 .track::-webkit-scrollbar { display: none; }
-.slide { flex: 0 0 100%; width: 100%; aspect-ratio: 16 / 10; scroll-snap-align: start; scroll-snap-stop: always; position: relative; cursor: zoom-in; display: grid; place-items: center; }
-.slide img, .slide video { width: 100%; height: 100%; display: block; }
+.slide { flex: 0 0 100%; width: 100%; min-height: 0; aspect-ratio: 16 / 10; scroll-snap-align: start; scroll-snap-stop: always; position: relative; cursor: zoom-in; overflow: hidden; }
+.slide img, .slide video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .slide-vid { background: var(--media-bg); }
 .slide-vid video { object-fit: cover; }
 .slide-img { background: #fff; }
@@ -176,7 +184,7 @@ time { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 /* ---------- responsive ---------- */
 @media (max-width: 720px) {
   .wrap { padding: 28px 18px 48px; }
-  .hero { flex-direction: column-reverse; gap: 22px; }
+  .hero { flex-direction: column; gap: 22px; }
   .hero-photo { align-self: flex-start; }
   .name { font-size: 1.8rem; }
   .pub { flex-direction: column; gap: 12px; }
@@ -210,3 +218,16 @@ time { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .keywords { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
 .keywords li { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .01em; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); }
 .keywords li:first-child { background: var(--accent); color: #fff; }
+
+/* link icons, each in its own colour */
+.li { width: 12px; height: 12px; fill: currentColor; flex: none; }
+.ic-arxiv { color: #B31B1B; }
+.ic-github { color: #24292F; }
+.ic-web { color: #2563EB; }
+.ic-hf { font-size: 12px; line-height: 1; }
+.ic-yt { color: #FF0000; }
+.ic-play { color: #7C3AED; }
+.ic-pipe { color: #0891B2; }
+.plink.muted .li { opacity: .55; }
+:root[data-design="b"] .ic-github, :root[data-theme="dark"] .ic-github { color: #E6EDF3; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ic-github { color: #E6EDF3; } }
