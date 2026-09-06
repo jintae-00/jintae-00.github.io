@@ -63,7 +63,8 @@ time { font-variant-numeric: tabular-nums; }
 .hero-links a:hover { color: var(--accent); text-decoration: none; }
 .email { margin-top: 6px; font-size: 14.8px; color: var(--ink-3); }
 .bio { margin-top: 14px; font-size: 15.8px; line-height: 1.8; color: var(--ink); }
-.bio strong { color: var(--ink); font-weight: 500; }
+.bio strong { color: var(--ink); font-weight: 600; }
+.bio .ul { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; text-decoration-color: #2155A4; }
 .bio a.plain { color: inherit; text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--line); }
 .bio a.plain:hover { color: var(--accent); text-decoration-color: var(--accent); }
 
@@ -89,7 +90,7 @@ time { font-variant-numeric: tabular-nums; }
 .news strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- publications ---------- */
-.pub { display: flex; gap: 20px; align-items: flex-start; padding: 18px 0; border-bottom: 1px solid var(--line-2); }
+.pub { display: flex; gap: 24px; align-items: flex-start; padding: 28px 0; border-bottom: 1px solid var(--line-2); }
 .pub:last-child { border-bottom: none; }
 .pub-text { padding: 6px 0 10px; }
 .pub-media { flex: 0 0 var(--media-w); width: var(--media-w); }
@@ -97,7 +98,7 @@ time { font-variant-numeric: tabular-nums; }
 .pub-title { font-family: var(--font-body); font-size: 16.2px; font-weight: 500; line-height: 1.5; letter-spacing: 0; }
 .pub-title a { color: inherit; }
 .pub-title a:hover { color: var(--accent); text-decoration: none; }
-.pub-authors { margin-top: 3px; font-size: 14.8px; color: var(--ink); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #b8b8b8; }
+.pub-authors { margin-top: 8px; font-size: 14.8px; color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #b8b8b8; }
 .pub-authors u { text-decoration: none; font-weight: 600; color: var(--ink); border-bottom: 1.5px solid var(--accent); }
 .anon { color: var(--ink-3); font-size: .92em; }
 .pub-venue { margin-top: 2px; font-size: 14.8px; color: var(--ink); }
