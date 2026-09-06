@@ -47,7 +47,7 @@ time { font-variant-numeric: tabular-nums; }
 .hf { font-size: 13px; line-height: 1; }
 
 .wrap { max-width: 880px; margin: 0 auto; padding: 44px 22px 56px; }
-.section { margin-top: 64px; }
+.section { margin-top: 43px; }
 .h2 { font-family: var(--font-display); font-size: 16.2px; font-weight: 500; letter-spacing: 0; padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 16px; display: flex; align-items: baseline; gap: 12px; }
 .h2-note { font-family: var(--font-body); font-size: .74rem; font-weight: 400; color: var(--ink-3); }
 
