@@ -111,6 +111,9 @@ time { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .pub-venue { margin-top: 2px; font-size: .81rem; color: var(--accent-ink); }
 .pub-venue strong { font-weight: 600; }
 .pub-note { margin-top: 6px; font-size: .81rem; color: var(--ink-3); line-height: 1.5; }
+.pub-keys { margin-top: 6px; font-size: .78rem; line-height: 1.7; color: var(--ink-3); }
+.pub-keys span + span::before { content: "·"; margin: 0 6px; color: var(--line); }
+.pub-keys br + span::before { content: none; }
 .pub-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
 .plink { display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink-2); font-size: .74rem; line-height: 1.4; transition: border-color .15s, color .15s; }
 .plink:hover { text-decoration: none; border-color: var(--accent); color: var(--accent-ink); }

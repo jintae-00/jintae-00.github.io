@@ -67,6 +67,40 @@
 <section class="section" id="publications">
   <h2 class="h2">Publications <span class="h2-note">* equal contribution</span></h2>
 
+  <!-- ---------- Ongoing: long-horizon action sparsity ---------- -->
+  <article class="pub" id="pub-sparsity">
+    <div class="pub-media">
+      <div class="carousel" data-carousel aria-label="Media for the action-sparsity project">
+        <div class="track">
+          <figure class="slide slide-img" data-full="assets/figures/sparsity_density_maps.webp" data-kind="image" data-caption="Simulation captures with training-density voxels (10 cm cells, darker = more demonstrations) for object and end-effector position. Densely covered start cells (top) succeed far more often than sparsely covered ones (bottom) within the same pick skill.">
+            <img src="assets/figures/sparsity_density_maps.webp" alt="Training-density voxel maps over simulation scenes: dense versus sparse start cells" loading="lazy" width="1434" height="1358">
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/sparsity_compound.webp" data-kind="image" data-caption="Compound start-state density (object position × end-effector position × gripper × orientation): failures pile up in the sparse bins and per-cell success climbs monotonically with density.">
+            <img src="assets/figures/sparsity_compound.webp" alt="Failed and succeeded subtasks by compound training density" loading="lazy" width="2400" height="908">
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/sparsity_factors.webp" data-kind="image" data-caption="The more start factors fall in the sparsest training quintile, the lower the success rate.">
+            <img src="assets/figures/sparsity_factors.webp" alt="Success rate versus number of sparse start factors" loading="lazy" width="2030" height="728">
+          </figure>
+          <figure class="slide slide-img" data-full="assets/figures/sparsity_depth.webp" data-kind="image" data-caption="Deeper into a long-horizon rollout, start states drift into never-seen cells and success drops in step.">
+            <img src="assets/figures/sparsity_depth.webp" alt="Success rate and never-seen start factors versus rollout depth" loading="lazy" width="2400" height="462">
+          </figure>
+        </div>
+        <button class="cnav prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="cnav next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        <div class="dots" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="pub-body">
+      <h3 class="pub-title">Tackling Long-Horizon Robot Action Sparsity</h3>
+      <p class="pub-authors"><u>Jintae Park</u>, Lyna Combo, Hyeonbin Hwang</p>
+      <p class="pub-venue">Ongoing research, 2026</p>
+      <p class="pub-keys"><span>Long-horizon VLA failure</span><span>sparse robot &amp; object pose coverage</span><span>action-space underfitting</span><br><span>statistical bottleneck localisation</span><span>start-cell sampling</span><span>recovery trajectories</span><span>modular framework</span></p>
+      <div class="pub-links">
+        <button class="plink" type="button" data-open="pub-sparsity" data-index="0"><svg class="li ic-pipe" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h6v5H3V4zm12 0h6v5h-6V4zM9 15h6v5H9v-5zM6 9v2.5h12V9h-1.5v1H7.5V9H6zm5 2.5V15h2v-3.5h-2z"/></svg>figures</button>
+      </div>
+    </div>
+  </article>
+
   <!-- ---------- Under review: robot navigation ---------- -->
   <article class="pub pub-wide" id="pub-nav">
     <div class="pub-media">
