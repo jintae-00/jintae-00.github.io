@@ -104,7 +104,7 @@ time { font-variant-numeric: tabular-nums; }
 .pub-venue { margin-top: 2px; font-size: 14.8px; color: var(--ink); }
 .pub-venue strong { font-weight: 500; color: #b5527a; background: #fdf0f5; padding: 1px 6px; border-radius: 3px; font-size: 11.7px; vertical-align: 1px; }
 .pub-note { margin-top: 6px; font-size: .81rem; color: var(--ink-3); line-height: 1.5; }
-.pub-keys { margin-top: 6px; font-size: 14.4px; line-height: 1.75; color: #666; max-width: 120ch; }
+.pub-keys { margin-top: 6px; font-size: 14.4px; line-height: 1.75; color: var(--ink); max-width: 120ch; }
 .pub-keys span + span::before { content: "·"; margin: 0 6px; color: var(--line); }
 .pub-keys br + span::before { content: none; }
 .pub-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
@@ -124,7 +124,7 @@ time { font-variant-numeric: tabular-nums; }
 .slide-vid video { object-fit: cover; }
 #pub-nav .slide { aspect-ratio: 1876 / 934; }
 /* the sparsity preview carries two panels, so it takes the whole column width */
-.pub-stack { flex-direction: column; gap: 14px; }
+.pub-stack { flex-direction: column-reverse; gap: 16px; }
 .pub-stack .pub-media { flex: none; width: 100%; }
 #pub-sparsity .slide { aspect-ratio: 1600 / 536; }
 #pub-sparsity .slide-vid video { object-fit: contain; }
