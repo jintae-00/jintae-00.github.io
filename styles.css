@@ -126,7 +126,7 @@ time { font-variant-numeric: tabular-nums; }
 /* the sparsity preview carries two panels, so it takes the whole column width */
 .pub-stack { flex-direction: column-reverse; gap: 16px; }
 .pub-stack .pub-media { flex: none; width: 100%; }
-#pub-sparsity .slide { aspect-ratio: 1600 / 536; }
+#pub-sparsity .slide { aspect-ratio: 2000 / 664; }
 #pub-sparsity .slide-vid video { object-fit: contain; }
 #pub-nav .slide-vid video { object-fit: contain; }
 .slide-light { background: #fff; }
